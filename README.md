@@ -1,6 +1,6 @@
-# SmartIrrigationModelExample_Safety
-This repo describes the capability of CHESSIoT to design and perform safety analysis on Smart Irrigation example 
+# SmartIrrigationModelExample
+This repository describes CHESSIoT's ability to build and perform safety analysis on the Smart Irrigation example.
 
-To run it you will need to install CHESSIoT first following the procedure indicated [here](https://github.com/fihirwe/CHESSIoT-features)
+To use it, you must first install CHESSIoT by following the instructions [here](https://github.com/fihirwe/CHESSIoT-features).
 
-If you manage to install, import the project and eNjoy!
+If you are successful in installing, import the project and have fun!
