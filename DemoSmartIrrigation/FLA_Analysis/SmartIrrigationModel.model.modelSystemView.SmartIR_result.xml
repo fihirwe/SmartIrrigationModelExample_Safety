@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SmartIR" name="SmartIR">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::SmartIR::inHuman2Mobile" name="inHuman2Mobile">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::SmartIR::DataMobile" name="DataMobile">
+        <outputFailure type="valueCoarse"/>
+        <outputFailure type="omission"/>
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::SERVER" sourceId="model::modelSystemView::Server::outServ2Gate2" targetComponent="model::modelSystemView::SmartIR::GATEWAY_1" targetId="model::modelSystemView::NodeGateway::inGateFmServer"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::MOBILE_PHONE" sourceId="model::modelSystemView::MobilePhone::outMobile2Serv" targetComponent="model::modelSystemView::SmartIR::SERVER" targetId="model::modelSystemView::Server::inServFmMobile"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::GATEWAY_2" sourceId="model::modelSystemView::NodeGateway::outGate2Node" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::inComNODE"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::PWSource" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::inPowerNODE"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::GATEWAY_1" sourceId="model::modelSystemView::NodeGateway::outGate2Node" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::inComNODE"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_1" sourceId="model::modelSystemView::Node::outDataNODE" targetComponent="model::modelSystemView::SmartIR::GATEWAY_1" targetId="model::modelSystemView::NodeGateway::inGateFmNode"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::MOBILE_PHONE" sourceId="model::modelSystemView::MobilePhone::outMobile" targetComponent="model::modelSystemView::SmartIR" targetId="model::modelSystemView::SmartIR::DataMobile"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::SERVER" sourceId="model::modelSystemView::Server::outServ2Gate1" targetComponent="model::modelSystemView::SmartIR::GATEWAY_2" targetId="model::modelSystemView::NodeGateway::inGateFmServer"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_2" sourceId="model::modelSystemView::Node::outDataNODE" targetComponent="model::modelSystemView::SmartIR::GATEWAY_2" targetId="model::modelSystemView::NodeGateway::inGateFmNode"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::GATEWAY_2" sourceId="model::modelSystemView::NodeGateway::outGate2Server" targetComponent="model::modelSystemView::SmartIR::SERVER" targetId="model::modelSystemView::Server::inServFmGate2"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR" sourceId="model::modelSystemView::SmartIR::inHuman2Mobile" targetComponent="model::modelSystemView::SmartIR::MOBILE_PHONE" targetId="model::modelSystemView::MobilePhone::inMobileFmHum"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::PWSource" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::inPowerNODE"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::SERVER" sourceId="model::modelSystemView::Server::outServMobile" targetComponent="model::modelSystemView::SmartIR::MOBILE_PHONE" targetId="model::modelSystemView::MobilePhone::inMobileFmServ"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::GATEWAY_1" sourceId="model::modelSystemView::NodeGateway::outGate2Server" targetComponent="model::modelSystemView::SmartIR::SERVER" targetId="model::modelSystemView::Server::inServFmGate1"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SmartIR::NODE_2" name="NODE_2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Node::inComNODE" name="inComNODE">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Node::inPowerNODE" name="inPowerNODE">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Node::GREEN_blink" name="GREEN_blink">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::outDataNODE" name="outDataNODE">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::RED_blink" name="RED_blink">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::Spinning_Valve" name="Spinning_Valve">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2redLED" targetComponent="model::modelSystemView::Node::redLED" targetId="model::modelSystemView::RedLED::inRedLED"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2greenLED" targetComponent="model::modelSystemView::Node::greenLED" targetId="model::modelSystemView::GreenLED::inGreenLED"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::moisturesensor" sourceId="model::modelSystemView::MoistureSensor::outMoistrue_MS" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inMoinsture2BD"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::temphumidity" sourceId="model::modelSystemView::TempHumidity::outTempHum_THS" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inTempHum2BD"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::redLED" sourceId="model::modelSystemView::RedLED::outRedLED" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::RED_blink"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::irrigationUnit" sourceId="model::modelSystemView::IrrigationUnit::outValve" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::Spinning_Valve"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2Valve" targetComponent="model::modelSystemView::Node::irrigationUnit" targetId="model::modelSystemView::IrrigationUnit::inValve"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::greenLED" sourceId="model::modelSystemView::GreenLED::outGreenLED" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::GREEN_blink"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_2" sourceId="model::modelSystemView::Node::inComNODE" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inComBoard"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_2" sourceId="model::modelSystemView::Node::inPowerNODE" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inPowerBD"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outDataBD" targetComponent="model::modelSystemView::SmartIR::NODE_2" targetId="model::modelSystemView::Node::outDataNODE"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::redLED" name="redLED">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::RedLED::inRedLED" name="inRedLED">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="commission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::RedLED::outRedLED" name="outRedLED">
+                <outputFailure type="commission"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inRedLED.commission->outRedLED.commission"/>
+              <flaxml:rule pattern="inRedLED.noFailure->outRedLED.omission"/>
+              <flaxml:rule pattern="inRedLED.omission->outRedLED.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::temphumidity" name="temphumidity">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::TempHumidity::dummyPort" name="dummyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::TempHumidity::outTempHum_THS" name="outTempHum_THS">
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dummyPort.noFailure->outTempHum_THS.omission"/>
+              <flaxml:rule pattern="dummyPort.noFailure->outTempHum_THS.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::moisturesensor" name="moisturesensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::MoistureSensor::dummyPort" name="dummyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::MoistureSensor::outMoistrue_MS" name="outMoistrue_MS">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dummyPort.noFailure->outMoistrue_MS.omission"/>
+              <flaxml:rule pattern="dummyPort.noFailure->outMoistrue_MS.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::irrigationUnit" name="irrigationUnit">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::IrrigationUnit::inValve" name="inValve">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="commission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::IrrigationUnit::outValve" name="outValve">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inValve.commission->outValve.commission"/>
+              <flaxml:rule pattern="inValve.noFailure->outValve.omission"/>
+              <flaxml:rule pattern="inValve.omission->outValve.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::greenLED" name="greenLED">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::GreenLED::inGreenLED" name="inGreenLED">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="commission"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::GreenLED::outGreenLED" name="outGreenLED">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inGreenLED.commission->outGreenLED.commission"/>
+              <flaxml:rule pattern="inGreenLED.noFailure->outGreenLED.omission"/>
+              <flaxml:rule pattern="inGreenLED.omission->outGreenLED.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::board" name="board">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Board::inComBoard" name="inComBoard">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inTempHum2BD" name="inTempHum2BD">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inMoinsture2BD" name="inMoinsture2BD">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inPowerBD" name="inPowerBD">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Board::outDataBD" name="outDataBD">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2redLED" name="outBD2redLED">
+                <outputFailure type="commission"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2Valve" name="outBD2Valve">
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2greenLED" name="outBD2greenLED">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.noFailure,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inMoinsture2BD.omission,inTempHum2BD.omission,inPowerBD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.omission,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.noFailure,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.valueCoarse,inTempHum2BD.valueCoarse,inPowerBD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.valueCoarse,inTempHum2BD.wildcard,inPowerBD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.wildcard,inTempHum2BD.valueCoarse,inPowerBD.noFailure->outDataBD.valueCoarse"/>
+              <flaxml:rule pattern="inComBoard.valueSubtle,inMoinsture2BD.noFailure,inTempHum2BD.noFailure,inPowerBD.noFailure->outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission,outDataBD.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SmartIR::SERVER" name="SERVER">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Server::inServFmGate1" name="inServFmGate1">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Server::inServFmGate2" name="inServFmGate2">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Server::inServFmMobile" name="inServFmMobile">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Server::outServ2Gate1" name="outServ2Gate1">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Server::outServMobile" name="outServMobile">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Server::outServ2Gate2" name="outServ2Gate2">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inServFmGate1.omission,inServFmGate2.omission,inServFmMobile.noFailure->outServMobile.omission,outServ2Gate1.noFailure,outServ2Gate2.noFailure"/>
+          <flaxml:rule pattern="inServFmGate1.noFailure,inServFmGate2.noFailure,inServFmMobile.noFailure->outServMobile.omission,outServ2Gate1.noFailure,outServ2Gate2.noFailure"/>
+          <flaxml:rule pattern="inServFmGate1.noFailure,inServFmGate2.noFailure,inServFmMobile.valueSubtle->outServMobile.noFailure,outServ2Gate1.valueSubtle,outServ2Gate2.valueSubtle"/>
+          <flaxml:rule pattern="inServFmGate1.valueCoarse,inServFmGate2.wildcard,inServFmMobile.noFailure->outServMobile.valueCoarse,outServ2Gate1.noFailure,outServ2Gate2.noFailure"/>
+          <flaxml:rule pattern="inServFmGate1.wildcard,inServFmGate2.valueCoarse,inServFmMobile.noFailure->outServMobile.valueCoarse,outServ2Gate1.noFailure,outServ2Gate2.noFailure"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SmartIR::GATEWAY_2" name="GATEWAY_2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::NodeGateway::inGateFmNode" name="inGateFmNode">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::NodeGateway::inGateFmServer" name="inGateFmServer">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::NodeGateway::outGate2Server" name="outGate2Server">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::NodeGateway::outGate2Node" name="outGate2Node">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inGateFmNode.omission,inGateFmServer.noFailure->outGate2Server.omission,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.valueCoarse,inGateFmServer.noFailure->outGate2Server.valueCoarse,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.noFailure,inGateFmServer.noFailure->outGate2Server.omission,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.noFailure,inGateFmServer.valueSubtle->outGate2Server.noFailure,outGate2Node.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SmartIR::GATEWAY_1" name="GATEWAY_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::NodeGateway::inGateFmNode" name="inGateFmNode">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::NodeGateway::inGateFmServer" name="inGateFmServer">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::NodeGateway::outGate2Node" name="outGate2Node">
+            <outputFailure type="omission"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::NodeGateway::outGate2Server" name="outGate2Server">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inGateFmNode.omission,inGateFmServer.noFailure->outGate2Server.omission,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.valueCoarse,inGateFmServer.noFailure->outGate2Server.valueCoarse,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.noFailure,inGateFmServer.noFailure->outGate2Server.omission,outGate2Node.noFailure"/>
+          <flaxml:rule pattern="inGateFmNode.noFailure,inGateFmServer.valueSubtle->outGate2Server.noFailure,outGate2Node.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SmartIR::PWSource" name="PWSource">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::PowerSource::dummyPort" name="dummyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::PowerSource::outPower" name="outPower">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dummyPort.noFailure->outPower.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SmartIR::NODE_1" name="NODE_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Node::inComNODE" name="inComNODE">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Node::inPowerNODE" name="inPowerNODE">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Node::Spinning_Valve" name="Spinning_Valve">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::GREEN_blink" name="GREEN_blink">
+            <outputFailure type="commission"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::RED_blink" name="RED_blink">
+            <outputFailure type="commission"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Node::outDataNODE" name="outDataNODE">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::moisturesensor" sourceId="model::modelSystemView::MoistureSensor::outMoistrue_MS" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inMoinsture2BD"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2Valve" targetComponent="model::modelSystemView::Node::irrigationUnit" targetId="model::modelSystemView::IrrigationUnit::inValve"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::redLED" sourceId="model::modelSystemView::RedLED::outRedLED" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::RED_blink"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2greenLED" targetComponent="model::modelSystemView::Node::greenLED" targetId="model::modelSystemView::GreenLED::inGreenLED"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::temphumidity" sourceId="model::modelSystemView::TempHumidity::outTempHum_THS" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inTempHum2BD"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outDataBD" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::outDataNODE"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::board" sourceId="model::modelSystemView::Board::outBD2redLED" targetComponent="model::modelSystemView::Node::redLED" targetId="model::modelSystemView::RedLED::inRedLED"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::greenLED" sourceId="model::modelSystemView::GreenLED::outGreenLED" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::GREEN_blink"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Node::irrigationUnit" sourceId="model::modelSystemView::IrrigationUnit::outValve" targetComponent="model::modelSystemView::SmartIR::NODE_1" targetId="model::modelSystemView::Node::Spinning_Valve"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_1" sourceId="model::modelSystemView::Node::inComNODE" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inComBoard"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SmartIR::NODE_1" sourceId="model::modelSystemView::Node::inPowerNODE" targetComponent="model::modelSystemView::Node::board" targetId="model::modelSystemView::Board::inPowerBD"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::redLED" name="redLED">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::RedLED::inRedLED" name="inRedLED">
+                <flaxml:inputFailure type="commission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::RedLED::outRedLED" name="outRedLED">
+                <outputFailure type="omission"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inRedLED.commission->outRedLED.commission"/>
+              <flaxml:rule pattern="inRedLED.noFailure->outRedLED.omission"/>
+              <flaxml:rule pattern="inRedLED.omission->outRedLED.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::moisturesensor" name="moisturesensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::MoistureSensor::dummyPort" name="dummyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::MoistureSensor::outMoistrue_MS" name="outMoistrue_MS">
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dummyPort.noFailure->outMoistrue_MS.omission"/>
+              <flaxml:rule pattern="dummyPort.noFailure->outMoistrue_MS.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::greenLED" name="greenLED">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::GreenLED::inGreenLED" name="inGreenLED">
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="commission"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::GreenLED::outGreenLED" name="outGreenLED">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inGreenLED.commission->outGreenLED.commission"/>
+              <flaxml:rule pattern="inGreenLED.noFailure->outGreenLED.omission"/>
+              <flaxml:rule pattern="inGreenLED.omission->outGreenLED.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::irrigationUnit" name="irrigationUnit">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::IrrigationUnit::inValve" name="inValve">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="commission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::IrrigationUnit::outValve" name="outValve">
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inValve.commission->outValve.commission"/>
+              <flaxml:rule pattern="inValve.noFailure->outValve.omission"/>
+              <flaxml:rule pattern="inValve.omission->outValve.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::temphumidity" name="temphumidity">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::TempHumidity::dummyPort" name="dummyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::TempHumidity::outTempHum_THS" name="outTempHum_THS">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dummyPort.noFailure->outTempHum_THS.omission"/>
+              <flaxml:rule pattern="dummyPort.noFailure->outTempHum_THS.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Node::board" name="board">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Board::inPowerBD" name="inPowerBD">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inComBoard" name="inComBoard">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inTempHum2BD" name="inTempHum2BD">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Board::inMoinsture2BD" name="inMoinsture2BD">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2Valve" name="outBD2Valve">
+                <outputFailure type="commission"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2redLED" name="outBD2redLED">
+                <outputFailure type="commission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outBD2greenLED" name="outBD2greenLED">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Board::outDataBD" name="outDataBD">
+                <outputFailure type="omission"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.noFailure,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inMoinsture2BD.omission,inTempHum2BD.omission,inPowerBD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.omission,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.omission,outBD2greenLED.omission,outBD2redLED.omission,outBD2Valve.omission"/>
+              <flaxml:rule pattern="inComBoard.noFailure,inPowerBD.noFailure,inMoinsture2BD.noFailure,inTempHum2BD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.valueCoarse,inTempHum2BD.valueCoarse,inPowerBD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.valueCoarse,inTempHum2BD.wildcard,inPowerBD.noFailure->outDataBD.valueCoarse,outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission"/>
+              <flaxml:rule pattern="inMoinsture2BD.wildcard,inTempHum2BD.valueCoarse,inPowerBD.noFailure->outDataBD.valueCoarse"/>
+              <flaxml:rule pattern="inComBoard.valueSubtle,inMoinsture2BD.noFailure,inTempHum2BD.noFailure,inPowerBD.noFailure->outBD2greenLED.commission,outBD2redLED.commission,outBD2Valve.commission,outDataBD.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SmartIR::MOBILE_PHONE" name="MOBILE_PHONE">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::MobilePhone::inMobileFmHum" name="inMobileFmHum">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::MobilePhone::inMobileFmServ" name="inMobileFmServ">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::MobilePhone::outMobile2Serv" name="outMobile2Serv">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::MobilePhone::outMobile" name="outMobile">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inMobileFmHum.commission,inMobileFmServ.noFailure->outMobile2Serv.valueSubtle"/>
+          <flaxml:rule pattern="inMobileFmServ.omission->outMobile.omission,outMobile2Serv.noFailure"/>
+          <flaxml:rule pattern="inMobileFmServ.valueCoarse->outMobile.valueCoarse,outMobile2Serv.noFailure"/>
+          <flaxml:rule pattern="inMobileFmServ.noFailure,inMobileFmHum.noFailure->outMobile.omission,outMobile2Serv.noFailure"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

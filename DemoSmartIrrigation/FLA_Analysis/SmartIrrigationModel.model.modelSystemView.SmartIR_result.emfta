@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of DataMobile+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at DataMobile port in SmartIR">
+    <events type="Intermediate" name="DataMobile+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at DataMobile port in SmartIR" description="1_omission">
+      <gate description="1_omission" events="/0/@events.1 /0/@events.42"/>
+    </events>
+    <events type="Intermediate" name="outMobile+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outMobile port in MOBILE_PHONE" description="2_omission">
+      <gate description="2_omission" events="/0/@events.2"/>
+    </events>
+    <events type="Intermediate" name="inMobileFmServ+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inMobileFmServ port in MOBILE_PHONE" description="3_omission">
+      <gate description="3_omission" events="/0/@events.3 /0/@events.40"/>
+    </events>
+    <events type="Intermediate" name="outServMobile+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outServMobile port in SERVER" description="4_omission">
+      <gate type="AND" description="4_omission" events="/0/@events.4 /0/@events.22"/>
+    </events>
+    <events type="Intermediate" name="inServFmGate1+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inServFmGate1 port in SERVER" description="5_omission">
+      <gate description="5_omission" events="/0/@events.5 /0/@events.20"/>
+    </events>
+    <events type="Intermediate" name="outGate2Server+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outGate2Server port in GATEWAY_1" description="6_omission">
+      <gate description="6_omission" events="/0/@events.6"/>
+    </events>
+    <events type="Intermediate" name="inGateFmNode+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inGateFmNode port in GATEWAY_1" description="7_omission">
+      <gate description="7_omission" events="/0/@events.7 /0/@events.9 /0/@events.16"/>
+    </events>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="8_omission">
+      <gate description="8_omission" events="/0/@events.8"/>
+    </events>
+    <events name="outDataBD+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;M" probability="2.300E-05" description="9_omission"/>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="10_omission">
+      <gate type="AND" description="10_omission" events="/0/@events.10 /0/@events.13"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inMoinsture2BD port in board" description="11_omission">
+      <gate description="11_omission" events="/0/@events.11"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outMoistrue_MS port in moisturesensor" description="12_omission">
+      <gate description="12_omission" events="/0/@events.12"/>
+    </events>
+    <events name="outMoistrue_MS+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;G" probability="1.700E-05" description="13_omission"/>
+    <events type="Intermediate" name="inTempHum2BD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inTempHum2BD port in board" description="14_omission">
+      <gate description="14_omission" events="/0/@events.14"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outTempHum_THS port in temphumidity" description="15_omission">
+      <gate description="15_omission" events="/0/@events.15"/>
+    </events>
+    <events name="outTempHum_THS+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;I" probability="1.900E-05" description="16_omission"/>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="17_omission">
+      <gate description="17_omission" events="/0/@events.17"/>
+    </events>
+    <events type="Intermediate" name="inPowerBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inPowerBD port in board" description="18_omission">
+      <gate description="18_omission" events="/0/@events.18"/>
+    </events>
+    <events type="Intermediate" name="outPower+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outPower port in PWSource" description="19_omission">
+      <gate description="19_omission" events="/0/@events.19"/>
+    </events>
+    <events name="outPower+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;E" probability="1.500E-05" description="20_omission"/>
+    <events type="Intermediate" name="outGate2Server+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outGate2Server port in GATEWAY_1" description="21_omission">
+      <gate description="21_omission" events="/0/@events.21"/>
+    </events>
+    <events name="outGate2Server+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;B" probability="1.200E-05" description="22_omission"/>
+    <events type="Intermediate" name="inServFmGate2+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inServFmGate2 port in SERVER" description="23_omission">
+      <gate description="23_omission" events="/0/@events.23 /0/@events.38"/>
+    </events>
+    <events type="Intermediate" name="outGate2Server+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outGate2Server port in GATEWAY_2" description="24_omission">
+      <gate description="24_omission" events="/0/@events.24"/>
+    </events>
+    <events type="Intermediate" name="inGateFmNode+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inGateFmNode port in GATEWAY_2" description="25_omission">
+      <gate description="25_omission" events="/0/@events.25 /0/@events.27 /0/@events.34"/>
+    </events>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="26_omission">
+      <gate description="26_omission" events="/0/@events.26"/>
+    </events>
+    <events name="outDataBD+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;M" probability="2.300E-05" description="27_omission"/>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="28_omission">
+      <gate type="AND" description="28_omission" events="/0/@events.28 /0/@events.31"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inMoinsture2BD port in board" description="29_omission">
+      <gate description="29_omission" events="/0/@events.29"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outMoistrue_MS port in moisturesensor" description="30_omission">
+      <gate description="30_omission" events="/0/@events.30"/>
+    </events>
+    <events name="outMoistrue_MS+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;G" probability="1.700E-05" description="31_omission"/>
+    <events type="Intermediate" name="inTempHum2BD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inTempHum2BD port in board" description="32_omission">
+      <gate description="32_omission" events="/0/@events.32"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outTempHum_THS port in temphumidity" description="33_omission">
+      <gate description="33_omission" events="/0/@events.33"/>
+    </events>
+    <events name="outTempHum_THS+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;I" probability="1.900E-05" description="34_omission"/>
+    <events type="Intermediate" name="outDataBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outDataBD port in board" description="35_omission">
+      <gate description="35_omission" events="/0/@events.35"/>
+    </events>
+    <events type="Intermediate" name="inPowerBD+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at inPowerBD port in board" description="36_omission">
+      <gate description="36_omission" events="/0/@events.36"/>
+    </events>
+    <events type="Intermediate" name="outPower+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outPower port in PWSource" description="37_omission">
+      <gate description="37_omission" events="/0/@events.37"/>
+    </events>
+    <events name="outPower+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;E" probability="1.500E-05" description="38_omission"/>
+    <events type="Intermediate" name="outGate2Server+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outGate2Server port in GATEWAY_2" description="39_omission">
+      <gate description="39_omission" events="/0/@events.39"/>
+    </events>
+    <events name="outGate2Server+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;F" probability="1.600E-05" description="40_omission"/>
+    <events type="Intermediate" name="outServMobile+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outServMobile port in SERVER" description="41_omission">
+      <gate description="41_omission" events="/0/@events.41"/>
+    </events>
+    <events name="outServMobile+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;C" probability="1.300E-05" description="42_omission"/>
+    <events type="Intermediate" name="outMobile+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at outMobile port in MOBILE_PHONE" description="43_omission">
+      <gate description="43_omission" events="/0/@events.43"/>
+    </events>
+    <events name="outMobile+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> &#xA;D" probability="1.400E-05" description="44_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of DataMobile+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at DataMobile port in SmartIR">
+    <events type="Intermediate" name="DataMobile+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at DataMobile port in SmartIR" description="45_valueCoarse">
+      <gate description="45_valueCoarse" events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="outMobile+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outMobile port in MOBILE_PHONE" description="46_valueCoarse">
+      <gate description="46_valueCoarse" events="/1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="inMobileFmServ+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inMobileFmServ port in MOBILE_PHONE" description="47_valueCoarse">
+      <gate description="47_valueCoarse" events="/1/@events.3 /1/@events.33"/>
+    </events>
+    <events type="Intermediate" name="outServMobile+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outServMobile port in SERVER" description="48_valueCoarse">
+      <gate description="48_valueCoarse" events="/1/@events.4"/>
+    </events>
+    <events type="Intermediate" name="inServFmGate1+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inServFmGate1 port in SERVER" description="49_valueCoarse">
+      <gate description="49_valueCoarse" events="/1/@events.5"/>
+    </events>
+    <events type="Intermediate" name="outGate2Server+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outGate2Server port in GATEWAY_1" description="50_valueCoarse">
+      <gate description="50_valueCoarse" events="/1/@events.6"/>
+    </events>
+    <events type="Intermediate" name="inGateFmNode+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inGateFmNode port in GATEWAY_1" description="51_valueCoarse">
+      <gate description="51_valueCoarse" events="/1/@events.7 /1/@events.9 /1/@events.16 /1/@events.20 /1/@events.24"/>
+    </events>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="52_valueCoarse">
+      <gate description="52_valueCoarse" events="/1/@events.8"/>
+    </events>
+    <events name="outDataBD+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;Q" probability="2.700E-05" description="53_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="54_valueCoarse">
+      <gate type="AND" description="54_valueCoarse" events="/1/@events.10 /1/@events.13"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inMoinsture2BD port in board" description="55_valueCoarse">
+      <gate description="55_valueCoarse" events="/1/@events.11"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outMoistrue_MS port in moisturesensor" description="56_valueCoarse">
+      <gate description="56_valueCoarse" events="/1/@events.12"/>
+    </events>
+    <events name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;H" probability="1.800E-05" description="57_valueCoarse"/>
+    <events type="Intermediate" name="inTempHum2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inTempHum2BD port in board" description="58_valueCoarse">
+      <gate description="58_valueCoarse" events="/1/@events.14"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outTempHum_THS port in temphumidity" description="59_valueCoarse">
+      <gate description="59_valueCoarse" events="/1/@events.15"/>
+    </events>
+    <events name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;J" probability="2.000E-05" description="60_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="61_valueCoarse">
+      <gate description="61_valueCoarse" events="/1/@events.17"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inMoinsture2BD port in board" description="62_valueCoarse">
+      <gate description="62_valueCoarse" events="/1/@events.18"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outMoistrue_MS port in moisturesensor" description="63_valueCoarse">
+      <gate description="63_valueCoarse" events="/1/@events.19"/>
+    </events>
+    <events name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;H" probability="1.800E-05" description="64_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="65_valueCoarse">
+      <gate description="65_valueCoarse" events="/1/@events.21"/>
+    </events>
+    <events type="Intermediate" name="inTempHum2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inTempHum2BD port in board" description="66_valueCoarse">
+      <gate description="66_valueCoarse" events="/1/@events.22"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outTempHum_THS port in temphumidity" description="67_valueCoarse">
+      <gate description="67_valueCoarse" events="/1/@events.23"/>
+    </events>
+    <events name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;J" probability="2.000E-05" description="68_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="69_valueCoarse">
+      <gate type="AND" description="69_valueCoarse" events="/1/@events.25"/>
+    </events>
+    <events type="Intermediate" name="inComBoard+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inComBoard port in board" description="70_valueSubtle">
+      <gate description="70_valueSubtle" events="/1/@events.26"/>
+    </events>
+    <events type="Intermediate" name="outGate2Node+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outGate2Node port in GATEWAY_1" description="71_valueSubtle">
+      <gate description="71_valueSubtle" events="/1/@events.27"/>
+    </events>
+    <events type="Intermediate" name="inGateFmServer+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inGateFmServer port in GATEWAY_1" description="72_valueSubtle">
+      <gate description="72_valueSubtle" events="/1/@events.28"/>
+    </events>
+    <events type="Intermediate" name="outServ2Gate2+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outServ2Gate2 port in SERVER" description="73_valueSubtle">
+      <gate description="73_valueSubtle" events="/1/@events.29"/>
+    </events>
+    <events type="Intermediate" name="inServFmMobile+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inServFmMobile port in SERVER" description="74_valueSubtle">
+      <gate description="74_valueSubtle" events="/1/@events.30"/>
+    </events>
+    <events type="Intermediate" name="outMobile2Serv+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outMobile2Serv port in MOBILE_PHONE" description="75_valueSubtle">
+      <gate type="AND" description="75_valueSubtle" events="/1/@events.31"/>
+    </events>
+    <events type="Intermediate" name="inMobileFmHum+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at inMobileFmHum port in MOBILE_PHONE" description="76_commission">
+      <gate description="76_commission" events="/1/@events.32"/>
+    </events>
+    <events type="External" name="inHuman2Mobile+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at inHuman2Mobile port in SmartIR" description="77_commission"/>
+    <events type="Intermediate" name="outServMobile+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outServMobile port in SERVER" description="78_valueCoarse">
+      <gate description="78_valueCoarse" events="/1/@events.34"/>
+    </events>
+    <events type="Intermediate" name="inServFmGate2+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inServFmGate2 port in SERVER" description="79_valueCoarse">
+      <gate description="79_valueCoarse" events="/1/@events.35"/>
+    </events>
+    <events type="Intermediate" name="outGate2Server+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outGate2Server port in GATEWAY_2" description="80_valueCoarse">
+      <gate description="80_valueCoarse" events="/1/@events.36"/>
+    </events>
+    <events type="Intermediate" name="inGateFmNode+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inGateFmNode port in GATEWAY_2" description="81_valueCoarse">
+      <gate description="81_valueCoarse" events="/1/@events.37 /1/@events.39 /1/@events.46 /1/@events.50 /1/@events.54"/>
+    </events>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="82_valueCoarse">
+      <gate description="82_valueCoarse" events="/1/@events.38"/>
+    </events>
+    <events name="outDataBD+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;Q" probability="2.700E-05" description="83_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="84_valueCoarse">
+      <gate type="AND" description="84_valueCoarse" events="/1/@events.40 /1/@events.43"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inMoinsture2BD port in board" description="85_valueCoarse">
+      <gate description="85_valueCoarse" events="/1/@events.41"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outMoistrue_MS port in moisturesensor" description="86_valueCoarse">
+      <gate description="86_valueCoarse" events="/1/@events.42"/>
+    </events>
+    <events name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;H" probability="1.800E-05" description="87_valueCoarse"/>
+    <events type="Intermediate" name="inTempHum2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inTempHum2BD port in board" description="88_valueCoarse">
+      <gate description="88_valueCoarse" events="/1/@events.44"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outTempHum_THS port in temphumidity" description="89_valueCoarse">
+      <gate description="89_valueCoarse" events="/1/@events.45"/>
+    </events>
+    <events name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;J" probability="2.000E-05" description="90_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="91_valueCoarse">
+      <gate description="91_valueCoarse" events="/1/@events.47"/>
+    </events>
+    <events type="Intermediate" name="inMoinsture2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inMoinsture2BD port in board" description="92_valueCoarse">
+      <gate description="92_valueCoarse" events="/1/@events.48"/>
+    </events>
+    <events type="Intermediate" name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outMoistrue_MS port in moisturesensor" description="93_valueCoarse">
+      <gate description="93_valueCoarse" events="/1/@events.49"/>
+    </events>
+    <events name="outMoistrue_MS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;H" probability="1.800E-05" description="94_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="95_valueCoarse">
+      <gate description="95_valueCoarse" events="/1/@events.51"/>
+    </events>
+    <events type="Intermediate" name="inTempHum2BD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at inTempHum2BD port in board" description="96_valueCoarse">
+      <gate description="96_valueCoarse" events="/1/@events.52"/>
+    </events>
+    <events type="Intermediate" name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outTempHum_THS port in temphumidity" description="97_valueCoarse">
+      <gate description="97_valueCoarse" events="/1/@events.53"/>
+    </events>
+    <events name="outTempHum_THS+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> &#xA;J" probability="2.000E-05" description="98_valueCoarse"/>
+    <events type="Intermediate" name="outDataBD+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at outDataBD port in board" description="99_valueCoarse">
+      <gate type="AND" description="99_valueCoarse" events="/1/@events.55"/>
+    </events>
+    <events type="Intermediate" name="inComBoard+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inComBoard port in board" description="100_valueSubtle">
+      <gate description="100_valueSubtle" events="/1/@events.56"/>
+    </events>
+    <events type="Intermediate" name="outGate2Node+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outGate2Node port in GATEWAY_2" description="101_valueSubtle">
+      <gate description="101_valueSubtle" events="/1/@events.57"/>
+    </events>
+    <events type="Intermediate" name="inGateFmServer+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inGateFmServer port in GATEWAY_2" description="102_valueSubtle">
+      <gate description="102_valueSubtle" events="/1/@events.58"/>
+    </events>
+    <events type="Intermediate" name="outServ2Gate1+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outServ2Gate1 port in SERVER" description="103_valueSubtle">
+      <gate description="103_valueSubtle" events="/1/@events.59"/>
+    </events>
+    <events type="Intermediate" name="inServFmMobile+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at inServFmMobile port in SERVER" description="104_valueSubtle">
+      <gate description="104_valueSubtle" events="/1/@events.60"/>
+    </events>
+    <events type="Intermediate" name="outMobile2Serv+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at outMobile2Serv port in MOBILE_PHONE" description="105_valueSubtle">
+      <gate type="AND" description="105_valueSubtle" events="/1/@events.61"/>
+    </events>
+    <events type="Intermediate" name="inMobileFmHum+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at inMobileFmHum port in MOBILE_PHONE" description="106_commission">
+      <gate description="106_commission" events="/1/@events.62"/>
+    </events>
+    <events type="External" name="inHuman2Mobile+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at inHuman2Mobile port in SmartIR" description="107_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel/>
+</xmi:XMI>
